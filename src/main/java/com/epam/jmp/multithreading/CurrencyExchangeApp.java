@@ -7,8 +7,8 @@ import java.io.*;
 import java.util.logging.*;
 
 class Account {
-    private String accountId;
-    private Map<String, BigDecimal> currencies = new HashMap<>();
+    private final String accountId;
+    private final Map<String, BigDecimal> currencies = new HashMap<>();
 
     public Account(String accountId) {
         this.accountId = accountId;
@@ -73,7 +73,7 @@ class CurrencyExchangeService {
     }
 }
 
-class CurrencyExchangeApp {
+public class CurrencyExchangeApp {
     public static void main(String[] args) throws InterruptedException {
         Logger logger = Logger.getLogger(CurrencyExchangeApp.class.getName());
         CurrencyExchangeService service = new CurrencyExchangeService();

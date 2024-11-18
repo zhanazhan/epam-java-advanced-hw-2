@@ -22,7 +22,7 @@ public class DasExperiment {
         Thread reader = new Thread(() -> {
             int sum = 0;
             try {
-                for (var value : map.values()) {
+                for (Integer value : map.values()) {
                     sum += value;
                     try {
                         Thread.sleep(5);
@@ -65,7 +65,7 @@ public class DasExperiment {
         Thread reader = new Thread(() -> {
             synchronized (map) { // Explicit synchronization for Collections.synchronizedMap
                 int sum = 0;
-                for (var value : map.values()) {
+                for (Integer value : map.values()) {
                     sum += value;
                     try {
                         Thread.sleep(5);
@@ -82,6 +82,7 @@ public class DasExperiment {
         writer.join();
         reader.join();
         System.out.println("Map size: " + map.size());
+
     }
 }
 
