@@ -13,7 +13,7 @@ public class App
         // Task 1
         DasExperiment.main(args);
         // Task 2
-        DeadlockExample.main(args);
+        // DeadlockExample.main(args);
         // Task 3
         MessageBus.main(args);
         // Task 4
